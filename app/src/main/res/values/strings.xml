@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Exchange Calculator</string>
+    <string name="beffExchSummStaticText">Before Exchange Sum</string>
+    <string name="exchangeRateStaticText">Exchange Rate</string>
+    <string name="exchResultStaticText">Total amount</string>
+    <string name="numberOfPeopleStaticText">Buddies</string>
+    <string name="entExchSum">Input here</string>
+    <string name="amount_result_here">Result here</string>
+    <string name="swipeExchStaticText">Swap</string>
+    <string name="swipe_exchange">Swap exchange</string>
+</resources>

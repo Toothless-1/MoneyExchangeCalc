@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+    <!--    <TextView-->
+    <!--            android:id="@+id/expensePerPersonTextView"-->
+    <!--            style="@style/h1Bold"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:paddingTop="3dp"-->
+    <!--            android:text="0"-->
+    <!--            android:textColor="@color/colorAccent" />-->
+
+    <TextView
+            style="@style/h2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:maxLines="1"
+            android:text="@string/beffExchSummStaticText"
+            android:textColor="@color/colorAccent" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <EditText
+                android:id="@+id/enterBefExchSumEditText"
+                style="@style/h2Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:elegantTextHeight="true"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/colorHint"
+                android:hint="@string/entExchSum"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                tools:text="1000"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/colorAccent" />
+
+        <ImageButton
+                android:id="@+id/befExchMoneyIconButton"
+                style="@style/operationButtonWhite"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="4"
+                android:background="@color/colorWhite"
+                android:src="@drawable/currency_rub_black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:orientation="vertical">
+
+        <TextView
+                style="@style/h4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="@string/exchangeRateStaticText"
+                android:textColor="@color/colorWhite" />
+
+        <EditText
+                android:id="@+id/exchangeRateEditText"
+                style="@style/h2Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:autofillHints="@string/entExchSum"
+                android:hint="@string/entExchSum"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:textColor="@color/colorWhite"
+                tools:text="74" />
+
+        <TextView
+                style="@style/h2Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="@string/exchResultStaticText"
+                android:textColor="@color/colorWhite" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <!--            <ImageButton-->
+            <!--                    android:id="@+id/subtractTipButton"-->
+            <!--                    style="@style/operationButton"-->
+            <!--                    android:layout_marginStart="20dp"-->
+            <!--                    android:layout_marginLeft="20dp"-->
+            <!--                    android:src="@drawable/ic_remove_circle_outline_black_24dp" />-->
+
+            <TextView
+                    android:id="@+id/amountTotalTextView"
+                    style="@style/h2Bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="4"
+                    android:hint="@string/amount_result_here"
+                    android:maxLines="1"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    tools:text="222" />
+
+            <ImageButton
+                    android:id="@+id/resultCurrencyButton"
+                    style="@style/operationButton"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:src="@drawable/currency_usd" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/swapExchButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="48dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_weight="1"
+                    android:drawableBottom="@drawable/ic_baseline_cached_24"
+                    android:contentDescription="@string/swipe_exchange"
+                    android:elevation="16dp"
+                    android:onClick="onClick"
+                    android:stateListAnimator="@null"
+                    android:translationZ="4dp"
+                    style="@style/RoundedCornerButton"
+                    android:background="@drawable/btn_rounded_corner"
+                    android:text="@string/swipeExchStaticText"
+
+                    />
+        </LinearLayout>
+
+        <!--        <TextView-->
+        <!--                style="@style/h4"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_margin="15dp"-->
+        <!--                android:text="@string/numberOfPeopleStaticText"-->
+        <!--                android:textColor="@color/colorWhite" />-->
+
+        <!--        <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:orientation="horizontal">-->
+
+        <!--            <ImageButton-->
+        <!--                    android:id="@+id/subtractPeopleButton"-->
+        <!--                    style="@style/operationButton"-->
+        <!--                    android:layout_marginStart="20dp"-->
+        <!--                    android:layout_marginLeft="20dp"-->
+        <!--                    android:src="@drawable/ic_remove_circle_outline_black_24dp" />-->
+
+        <!--            <TextView-->
+        <!--                    android:id="@+id/numberOfPeopleTextView"-->
+        <!--                    style="@style/h2Bold"-->
+        <!--                    android:layout_width="0dp"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_margin="15dp"-->
+        <!--                    android:layout_weight="1"-->
+        <!--                    android:text="4"-->
+        <!--                    android:textColor="@color/colorWhite" />-->
+
+        <!--            <ImageButton-->
+        <!--                    android:id="@+id/addPeopleButton"-->
+        <!--                    style="@style/operationButton"-->
+        <!--                    android:layout_marginEnd="20dp"-->
+        <!--                    android:layout_marginRight="20dp"-->
+        <!--                    android:src="@drawable/ic_add_circle_outline_black_24dp"-->
+        <!--                    android:theme="@style/ThemeOverlay.AppCompat.Light" />-->
+
+        <!--        </LinearLayout>-->
+
+    </LinearLayout>
+
+</LinearLayout>
